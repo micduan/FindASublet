@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="/static/style.css" type="text/css">
+
+<form action="/city" method="POST">
+    <div class="login">
+        <div class="login-screen">
+            <div class="page-title">
+                <h1>House Finder v1.0</h1>
+            </div>
+
+            <div class="text-form">
+
+                <div class="instructions">
+                    Select Filters
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <div class="input-token">
+                    <label for="bedrooms"> Number of Bedrooms: </label>
+                    <select class="login-field" name="bedrooms">
+                        <option class="login-field" value="" name="bedrooms" selected>All</option>
+                        <option class="login-field" value="1" name="bedrooms" >1</option>
+                        <option class="login-field" value="2" name="bedrooms" >2</option>
+                        <option class="login-field" value="3" name="bedrooms" >3</option>
+                        <option class="login-field" value="4" name="bedrooms" >4+</option>
+                    </select>
+                </div>
+
+                 <div class="input-token">
+                    <label for="furnished"> Furnished: </label>
+                    <select class="login-field" name="furnished">
+                        <option></option>
+                        <option class="login-field" value="Y" name="furnished" >Yes</option>
+                        <option class="login-field" value="N" name="furnished" >No</option>
+                    </select>
+                </div>
+
+                <input type="hidden" name="city" value="{{ city }}">
+
+                <input type="submit" value="Continue" class="btn btn-primary btn-large btn-block" >
+                <br>
+            </div>
+        </div>
+    </div>
+</form>

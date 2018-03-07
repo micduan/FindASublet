@@ -1,0 +1,48 @@
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="/static/style.css" type="text/css">
+
+<form action="/schedule" method="POST">
+<div class="page-title">
+    <h1>SubletFinder v1.0</h1>
+</div>
+
+<div class="text-form">
+    <body>
+        <div class="login-screen">
+         <table class="table">
+             <thead>
+                 <tr class="row">
+                  <th>Title</th>
+                 <th>Price</th>
+                  <th>Intersection</th>
+                  <th>Start Date</th>
+                 <th> End Date </th>
+                 <th> Other Details </th>
+                 <th> Bedrooms </th>
+             </tr>
+             </thead>
+             <tbody>
+                 {% for item in test %}
+                    <tr class="row">
+                        <td> <a href={{item[6]}}>{{item[1]}}</a> </td>
+                        <td>{{item[0]}}</td>
+                        <td>{{item[7]}} and {{item[8]}}</td>
+                        <td>{{item[3]}}</td>
+                        <td>{{item[4]}}</td>
+                        <td>{{item[5]}}</td>
+                        <td>{{item[9]}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    </body>
+ </div>
